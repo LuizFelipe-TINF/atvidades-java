@@ -1,5 +1,5 @@
-let maior = -Infinity;
-let menor = Infinity;
+let maior = null;
+let menor = null;
 let i = 1;
 
 while (i <= 10) {
