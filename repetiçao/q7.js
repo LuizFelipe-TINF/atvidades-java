@@ -7,7 +7,7 @@ if (oper == 5){
     break;
 }
 if (oper != 5 && oper != 4 && oper != 3 && oper != 2 && oper != 1){
-   alert("DEU TUDO ERRADO REINICIA O PROGRAMA")
+   alert("deu errado")
    break
 }
 
@@ -56,4 +56,5 @@ else if (n2 == 0){
 console.log("O número de Operações de soma realizadas foi de: ",+s)
 console.log("O número de Operações de subtração realizadas foi de: ",+sub)
 console.log("O número de Operações de multiplicação realizadas foi de: ",+mul)
+
 console.log("O número de Operações de divisão realizadas foi de: ",+div)
