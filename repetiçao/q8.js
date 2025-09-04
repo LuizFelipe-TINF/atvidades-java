@@ -46,7 +46,7 @@ let pokemon = {
       }
   
       if (meuHP > 0) {
-        console.log("Você venceu a batalha!");
+        console.log("Você venceu");
         pokemon.vitorias++;
         pokemon.level++;
   
@@ -61,7 +61,7 @@ let pokemon = {
           console.log(pokemon.nome + " ganhou +1 de Ataque!");
         }
       } else {
-        console.log("Você perdeu a batalha...");
+        console.log("Você perdeu");
         pokemon.derrotas++;
       }
   
@@ -81,4 +81,5 @@ let pokemon = {
   
   } while (opcao !== "4");
   
+
   console.log("Programa encerrado");
