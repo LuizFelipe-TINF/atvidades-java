@@ -1,11 +1,10 @@
-let tiposSanguineos = [];
-
+let tipos = [];
 for (let i = 0; i < 10; i++) {
-    let tipo = prompt("Digite o tipo sanguíneo da pessoa " + (i + 1) + ":");
-    tiposSanguineos.push(tipo);
+  tipos[i] = prompt("Digite o tipo sanguíneo da pessoa " + (i+1) + ":");
 }
 
-console.log("=== Cadastros de Tipos Sanguíneos ===");
-for (let i = 0; i < tiposSanguineos.length; i++) {
-    console.log("Pessoa " + (i + 1) + " - Tipo sanguíneo: " + tiposSanguineos[i]);
+let textoTipos = "";
+for (let i = 0; i < 10; i++) {
+  textoTipos += "Pessoa " + i + ": " + tipos[i] + "\n";
 }
+alert(textoTipos);

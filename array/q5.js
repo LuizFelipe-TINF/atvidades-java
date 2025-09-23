@@ -1,66 +1,45 @@
-let filmes = [];
+let nomes = [];
+let aval = [];
 
 for (let i = 0; i < 6; i++) {
-    let nome = prompt("Digite o nome do filme " + (i + 1) + ":");
-    let nota = Number(prompt("Digite a nota do filme " + (i + 1) + ":"));
-    filmes.push({ nome: nome, nota: nota });
+  nomes[i] = prompt("Digite o nome do filme " + (i+1) + ":");
+  aval[i] = Number(prompt("Digite a nota do filme " + nomes[i] + ":"));
 }
 
-let opcao;
-do {
-    opcao = prompt(
-        "=== MENU ===\n" +
-        "a) Imprimir dados de 1 filme\n" +
-        "b) Avaliar um filme\n" +
-        "c) Alterar dados de um filme\n" +
-        "d) Finalizar e mostrar todos os filmes\n" +
-        "Escolha uma opção:"
-    ).toLowerCase();
+let opcao = "";
+while (opcao != "d") {
+  opcao = prompt(
+    "Menu:\n" +
+    "a) Mostrar 1 filme\n" +
+    "b) Avaliar filme (nova nota)\n" +
+    "c) Alterar filme\n" +
+    "d) Finalizar"
+  );
 
-    switch (opcao) {
-        case "a":
-            let indiceA = Number(prompt("Digite o índice do filme (0 a " + (filmes.length - 1) + "):"));
-            if (indiceA >= 0 && indiceA < filmes.length) {
-                console.log("Filme: " + filmes[indiceA].nome + " | Nota: " + filmes[indiceA].nota);
-            } else {
-                console.log("Índice inválido!");
-            }
-            break;
+  if (opcao == "a") {
+    let i = Number(prompt("Digite o índice (0 a 5):"));
+    alert("Filme: " + nomes[i] + " | Nota: " + aval[i]);
+  }
 
-        case "b":
-            let indiceB = Number(prompt("Digite o índice do filme (0 a " + (filmes.length - 1) + "):"));
-            if (indiceB >= 0 && indiceB < filmes.length) {
-                let novaNota = Number(prompt("Digite a nova nota do filme:"));
-                filmes[indiceB].nota = (filmes[indiceB].nota + novaNota) / 2;
-                console.log("Nota atualizada! Nova média: " + filmes[indiceB].nota.toFixed(2));
-            } else {
-                console.log("Índice inválido!");
-            }
-            break;
+  else if (opcao == "b") {
+    let i = Number(prompt("Digite o índice (0 a 5):"));
+    let nova = Number(prompt("Digite a nova nota:"));
+    aval[i] = (aval[i] + nova) / 2;
+    alert("Nova nota: " + aval[i]);
+  }
 
-        case "c":
-            let indiceC = Number(prompt("Digite o índice do filme (0 a " + (filmes.length - 1) + "):"));
-            if (indiceC >= 0 && indiceC < filmes.length) {
-                let novoNome = prompt("Digite o novo nome do filme:");
-                let novaNota = Number(prompt("Digite a nova nota do filme:"));
-                filmes[indiceC].nome = novoNome;
-                filmes[indiceC].nota = novaNota;
-                console.log("Dados do filme atualizados!");
-            } else {
-                console.log("Índice inválido!");
-            }
-            break;
+  else if (opcao == "c") {
+    let i = Number(prompt("Digite o índice (0 a 5):"));
+    nomes[i] = prompt("Novo nome do filme:");
+    aval[i] = Number(prompt("Nova nota do filme:"));
+    alert("Filme alterado: " + nomes[i] + " | Nota: " + aval[i]);
+  }
 
-        case "d":
-            console.log("=== Lista final de filmes ===");
-            for (let i = 0; i < filmes.length; i++) {
-                console.log("[" + i + "] Filme: " + filmes[i].nome + " | Nota: " + filmes[i].nota);
-            }
-            console.log("Programa finalizado!");
-            break;
-
-        default:
-            console.log("Opção inválida! Tente novamente.");
+  else if (opcao == "d") {
+    let todos = "";
+    for (let i = 0; i < 6; i++) {
+      todos += i + " - " + nomes[i] + " | Nota: " + aval[i] + "\n";
     }
-
-} while (opcao !== "d");
+    alert("Todos os filmes:\n" + todos);
+  }
+}
