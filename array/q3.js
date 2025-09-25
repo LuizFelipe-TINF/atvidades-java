@@ -10,4 +10,5 @@ for (let i = 0; i < 10; i++) {
   else if (fita[i] == "C") comp[i] = "G";
   else if (fita[i] == "G") comp[i] = "C";
 }
-alert("Original: " + fita.join(" ") + "\nComplementar: " + comp.join(" "));
+alert("Original: " + fita(" ") + "\nComplementar: " + comp(" "));
+
