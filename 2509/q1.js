@@ -1,4 +1,4 @@
-function processo(){
+function processo(valor){
     switch(valor){
         case '1': inserirvenda()
         break;
