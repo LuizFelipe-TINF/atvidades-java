@@ -1,0 +1,13 @@
+body{
+            font-family: "Arial";
+            background-color: azure;
+        }
+
+.aluno {
+            border: 1px solid blue;     
+            padding: 10px;             
+            margin: 10px;               
+            border-radius: 8px;         
+            width: 200px;               
+            font-family: Arial, sans-serif;
+        }
